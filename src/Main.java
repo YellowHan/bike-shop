@@ -4,8 +4,7 @@ import java.time.LocalDate;
 import java.util.Scanner;
 
 import assembly.Replacement;
-import part.Part;
-import part.PartDataList;
+import part.data.PartDataList;
 
 public class Main {
 	public static void main(String[] args) {

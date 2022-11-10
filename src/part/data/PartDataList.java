@@ -1,4 +1,6 @@
-package part;
+package part.data;
+
+import part.Part;
 
 import java.util.Arrays;
 
