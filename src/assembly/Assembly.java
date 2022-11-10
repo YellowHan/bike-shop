@@ -24,7 +24,7 @@ public class Assembly { // 조립 클래스
     public void addTempData(String tempData) {
 		System.out.println("Assembly::addTempData(String) invoked.");
 
-        this.tempData[index++] = tempData;
+        Assembly.tempData[index++] = tempData;
     } // addTempData
 
 
@@ -48,8 +48,7 @@ public class Assembly { // 조립 클래스
 
         int sum = 0;
 
-        for(int i = 0 ; i < tempData.length ; i++) {
-            String str = tempData[i];
+        for (String str : tempData) {
             sum += Integer.parseInt(str.substring(str.lastIndexOf(' ') + 1));
         } // for
 

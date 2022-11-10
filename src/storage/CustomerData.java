@@ -45,6 +45,12 @@ public class CustomerData { // 고객 자전거 정보 클래스 - 목적 : A/S�
         count++;
     } // setSerialNumber
 
+    public void printCustomerData(long serialNumber) {
+        System.out.println("BikeInfoStorage::printCustomerData() invoked.)");
+
+
+    } // printCustomerData
+
 
     // SerialNumber가 존재하는지 여부 조회(있으면 true, 없으면 false)
     public boolean isSerialNumber(long serialNumber) {

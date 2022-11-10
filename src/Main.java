@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 import assembly.Assembly;
 import assembly.Replacement;
+import payment.Payment;
 import storage.CustomerData;
 import storage.PartDataList;
 
@@ -13,6 +14,7 @@ public class Main {
         PartDataList partDataList = new PartDataList(); // 부품 데이터 클래스 객체 생성
         Assembly assembly = new Assembly(); // 조립 객체 생성
         CustomerData customerData = new CustomerData(); // 고객 자전거 정보 객체 생성
+        Payment payment = new Payment(); // 결제 객체 생성
 
         // TODO: 최종 완료 후 while문 안에 넣어 고객이 원할 때 종료되게 하기
         // TODO: while 탈출 조건을 정하기
@@ -41,8 +43,9 @@ public class Main {
                 // 최종 구매 결정 여부 확인
                 boolean isDecision = information.isDecision();
 
-                // TODO: isDecision가 true(구매확정)이면 결제로
-                // TODO: false(구매취소)면 어떻게??
+                // 결제방식 선택
+                payment.payment(isDecision);
+
                 break;
 
             case 2: // 2번 : A/S 요청
@@ -116,7 +119,7 @@ public class Main {
 
                             // 입력받은 서비스 번호에 맞는 모델로 조립
                             // 부품 교체 메소드 호출
-                            replacement.setChangePart(bikeSerialNumber, "Brake", serviceNumber);
+                            replacement.setChangePart(serialNumber, "Brake", serviceNumber);
 
 //                    case 2 -> "프레임";
 //                    case 3 -> "기어레버";
@@ -125,7 +128,7 @@ public class Main {
 //                    case 6 -> "안장";
 //					default -> "바퀴";
                     }
-                    ; // switch
+                    // switch
 
                 } else {
                     System.out.println("정품이 아닙니다.");

@@ -1,4 +1,5 @@
 import assembly.Assembly;
+import payment.Payment;
 import storage.PartDataList;
 
 import java.util.Scanner;
@@ -38,7 +39,7 @@ public class Information { // 안내 메시지 모음 클래스
         Scanner scanner = new Scanner(System.in); // 스캐너 객체 생성
         PartDataList partDataList = new PartDataList(); // 부품 데이터 객체 생성
         Assembly assembly = new Assembly(); // 조립 객체 생성
-        int serviceNumber = 0; // 서비스 번호 저장
+        int serviceNumber; // 서비스 번호 저장
 
         String[] order = {"", "브레이크", "프레임", "기어레버", "핸들", "페달", "안장", "바퀴"}; // index가 1부터이므로 0번째 인덱스에는 빈문자열 저장
 
@@ -132,6 +133,9 @@ public class Information { // 안내 메시지 모음 클래스
 
         int totalPrice = Assembly.totalPrice();
 
+        // totalPrice를 결제에서 사용하기 위해 전달
+        Payment.setTotalPrice(totalPrice);
+
         System.out.println("부품의 총 가격은 " + totalPrice + "입니다.");
         System.out.println();
         System.out.println("위 내용으로 구매를 진행하시겠습니까?");
@@ -140,8 +144,10 @@ public class Information { // 안내 메시지 모음 클래스
 
         int serviceNumber = scanner.nextInt();
 
-        return serviceNumber == 1 ? true : false;
-    }
+        return serviceNumber == 1;
+    } // isDecision
+
+
 
 
 } // end class

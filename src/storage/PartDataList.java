@@ -1,9 +1,5 @@
 package storage;
 
-import part.Part;
-
-import java.util.Arrays;
-
 public class PartDataList { // 부품 데이터 클래스
 
     public PartDataList() {
