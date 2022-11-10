@@ -1,6 +1,6 @@
 package part;
 
-public class Brake {
+public class Brake extends Part{
 
 //================================================
 //	필드

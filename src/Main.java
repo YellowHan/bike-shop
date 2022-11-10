@@ -4,11 +4,20 @@ import java.time.LocalDate;
 import java.util.Scanner;
 
 import assembly.Replacement;
+import part.Part;
+import part.PartDataList;
 
 public class Main {
 	public static void main(String[] args) {
 
 		BikeInfoStorage bikeInfoStorage = new BikeInfoStorage(); // 판매된 자전거의 정보를 저장
+
+		PartDataList partDataList = new PartDataList();
+		String brakeList = partDataList.getBrakes();
+		System.out.println(brakeList);
+
+		String brake = partDataList.getBrake(0);
+		System.out.println("brake[0] => " + brake);
 
 		// 샘플 데이터 입력(테스트용)
 		bikeInfoStorage.setSerialNumber(221110123456L, "삼천리", "종이", 55600);
@@ -114,9 +123,9 @@ public class Main {
 				switch (serviceNumber) {
 				case 1: // 1번 : 브레이크
 					// 제품 패키지의 브레이크 클래스의 객체 생성
-					product.Brake brake = new product.Brake();
 
-					String brakeInfo = brake.getBrakeModelInfo();
+
+//					String brakeInfo = brake.getBrakeModelInfo();
 
 					System.out.println("====================================");
 					System.out.println("            Brake Model");
@@ -124,7 +133,7 @@ public class Main {
 					System.out.println("아래 모델 중 조립할 모델을 선택해주세요");
 
 					// 브레이크 모델들에 대해 출력
-					System.out.println(brakeInfo);
+//					System.out.println(brakeInfo);
 					System.out.print("> ");
 
 					// 서비스 번호 입력받기

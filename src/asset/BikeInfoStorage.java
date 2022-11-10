@@ -27,15 +27,15 @@ public class BikeInfoStorage { // 자전거 정보 저장 클래스
          * 2. 제작 또는 교체가 있을 때마다 해당 부품 측에서 완성된 문자열을 주면
          *    그 정보들을 하나의 문자열로 합쳐서 출력
          */
-        String bikeInfo = """
-        		Brake | model : 이모델, type : 저타입, price : 39900
-        		Frame | model : 프라모델, type : 저세상타입, price : 4444
-        		GearLever | model : 기어모델, type : 타타입, price : 56789
-        		Handle | model : 손모델, type : 팔다리타입, price : 323444
-        		""";
+//        String bikeInfo = """
+//        		Brake | model : 이모델, type : 저타입, price : 39900
+//        		Frame | model : 프라모델, type : 저세상타입, price : 4444
+//        		GearLever | model : 기어모델, type : 타타입, price : 56789
+//        		Handle | model : 손모델, type : 팔다리타입, price : 323444
+//        		""";
 
         // Key : serialNumber, Value : bikeInfo 형태로 저장
-        serialNumbers.put(serialNumber, bikeInfo);
+//        serialNumbers.put(serialNumber, bikeInfo);
     } // setSerialNumber
 
     // SerialNumber가 존재하는지 여부 조회(있으면 true, 없으면 false)
