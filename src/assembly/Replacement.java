@@ -1,7 +1,5 @@
 package assembly;
 
-import asset.BikeInfoStorage;
-
 public class Replacement { // 부품 교체 클래스
 	
 	public Replacement() {
@@ -10,9 +8,7 @@ public class Replacement { // 부품 교체 클래스
 	
 	public void setChangePart(long serialNumber, String part, int modelNumber) {
 		System.out.println("Replacement::setChangePart(int, int) invoked.");
-		
-		// 자전거 정보를 담고 있는 BikeInfoStorage 객체 생성
-		BikeInfoStorage storage = new BikeInfoStorage();
+
 		
 		// TODO: 기존 값에서 교체되는 부품의 값만 변경
 		// 시리얼넘버의 값을 가져와서 part에 맞는 값을 찾아 수정 후
