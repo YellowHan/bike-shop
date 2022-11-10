@@ -14,12 +14,12 @@ public class PartDataList { // 부품 데이터 클래스
 
     // 개별 부품의 배열
     String[] brakes; // 브레이크 모음
-    String[] frames = new String[5]; // 프레임 모음
-    String[] gearLevers = new String[5]; // 기어레버 모음
-    String[] handles = new String[5]; // 핸들 모음
-    String[] pedals = new String[5]; // 페달 모음
-    String[] seats = new String[5]; // 안장 모음
-    String[] wheels = new String[5]; // 바퀴 모음
+    String[] frames; // 프레임 모음
+    String[] gearLevers; // 기어레버 모음
+    String[] handles; // 핸들 모음
+    String[] pedals; // 페달 모음
+    String[] seats; // 안장 모음
+    String[] wheels; // 바퀴 모음
 
 
     // 각 배열에 데이터 저장
@@ -33,27 +33,27 @@ public class PartDataList { // 부품 데이터 클래스
         };
 
         frames = new String[]{
-
+                // TODO: 프레임 데이터 5개 입력
         };
 
         gearLevers = new String[]{
-
+                // TODO: 기어레버 데이터 5개 입력
         };
 
         handles = new String[]{
-
+                // TODO: 핸들 데이터 5개 입력
         };
 
         pedals = new String[]{
-
+                // TODO: 페달 데이터 5개 입력
         };
 
         seats = new String[]{
-
+                // TODO: 안장 데이터 5개 입력
         };
 
         wheels = new String[]{
-
+                // TODO: 바퀴 데이터 5개 입력
         };
 
         // 부품 모음 배열에 각 부품 배열 저장
